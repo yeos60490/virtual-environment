@@ -63,7 +63,7 @@ def env_create(env, python_ver):
     if python_ver == "current":
         python_ver = "3.7"
     
-    print(f"create {env} python version {python_ver}")
+    print(f"Environment created: {env} (python ver. {python_ver})")
     env_path = ROOT_DIR + f"/envs/{env}"
     os.system(f"mkdir {env_path}")
     os.system(f"touch {env_path}/settings.json")
@@ -87,7 +87,7 @@ def env_remove(env):
     check = input(f"Remove Environment: {env} ? (yes/no): ")
     if check == "yes":
         os.system(f"rm -r {ROOT_DIR}/envs/{env}")
-        print("removed")
+        print(f"Environment removed : {env}")
     else:
         print("cancelled")
 
