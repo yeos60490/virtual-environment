@@ -2,7 +2,7 @@
 Linux 용 Python 환경 분리 프로그램
 
 -----
-- package 충돌 방
+- package 충돌 방지 
 - 리소스 공유 
 
 -----
