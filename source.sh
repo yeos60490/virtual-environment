@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-source command.sh
+source shell.sh activate test
