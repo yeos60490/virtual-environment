@@ -1,0 +1,19 @@
+#!/bin/bash
+
+env=$1
+
+command_type="activate"
+root_dir='/root/capstone/'
+
+
+#change prompt 
+echo $command_type
+export PS1="(${env})"$PS1
+	
+
+#change python, package 
+python3 ${root_dir}activate.py ${env}
+
+
+
+

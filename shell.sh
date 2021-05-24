@@ -2,12 +2,14 @@
 command_type=$1
 env=$2
 base_prompt="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$" 
+root_dir='/root/capstone/'
 
 if [ "${command_type}" = "activate" ]; then
 	echo "act"
 	echo $command_type
 	export PS1="(${env})"$PS1
 	#change_prompt="(${env})"$PS1
+	python3 ${root_dir}change_sys.py ${env}
 
 
 elif [ "${command_type}" = "deactivate" ]; then

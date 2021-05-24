@@ -1,1 +1,3 @@
-export PS1="(hi)"$PS1
+#!/usr/bin/env bash
+
+/root/capstone/shell.sh activate test
