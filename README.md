@@ -23,7 +23,7 @@ Linux 용 Python 환경 분리 프로그램
 - 환경 만들기 / 삭제
 
       consh env create NAME [-option python==version]
-      consh env delete NAME
+      consh env remove NAME
       
       
 - 환경 활성화 / 비활성화
