@@ -1,7 +1,7 @@
 #!/bin/bash
 
 command_type="deactivate"
-root_dir='/root/capstone/'
+root_dir="/root/capstone/"
 
 echo $command_type
 
