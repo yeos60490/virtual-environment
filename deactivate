@@ -1,23 +1,17 @@
 #!/bin/bash
 
-#env=$1
-
 command_type="deactivate"
 root_dir='/root/capstone/'
 
-
-#change prompt 
 echo $command_type
-#echo $PS1
 
-prompt=$(python3 ${root_dir}deactivate.py prompt)
-
-#echo $prompt
-export PS1=${prompt}" "
-	
 
 #change python, package 
-#python3 ${root_dir}activate.py ${env}
+python3 ${root_dir}env.py deactivate base
 
 
+#change prompt 
+prompt=$(python3 ${root_dir}env.py deactivate prompt)
+export PS1=${prompt}" "
+	
 

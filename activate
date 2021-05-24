@@ -3,7 +3,7 @@
 env=$1
 
 command_type="activate"
-root_dir='/root/capstone/'
+root_dir="/root/capstone/"
 
 
 #change prompt 
@@ -12,7 +12,7 @@ export PS1="(${env})"$PS1
 	
 
 #change python, package 
-python3 ${root_dir}activate.py ${env}
+python3 ${root_dir}env.py activate ${env}
 
 
 
