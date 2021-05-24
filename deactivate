@@ -1,25 +1,23 @@
 #!/bin/bash
 
-env=$1
+#env=$1
 
 command_type="deactivate"
 root_dir='/root/capstone/'
 
-base_prompt="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$" 
 
-prompt=$PS1
-
-
+#change prompt 
 echo $command_type
 #echo $PS1
 
+prompt=$(python3 ${root_dir}deactivate.py prompt)
 
-#echo "${PS1%(test)}"
-echo "${prompt%(test)}"
-#$prompt=$PS1 | sed 's/('${env}')//'
-$prompt=sed 's/('${env}')//' $PS1
 #echo $prompt
+export PS1=${prompt}" "
+	
 
-#export PS1="$PS1 | sed 's/('${env}')//'"
+#change python, package 
+#python3 ${root_dir}activate.py ${env}
+
 
 
