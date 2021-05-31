@@ -10,8 +10,8 @@ Linux 용 Python 환경 분리 프로그램
 - bashrc 에 다음 내용 추가
 
       vi /root/.bashrc
-      alias consh='/usr/bin/python /root/capstone/consh.py'
-      export PATH=$PATH:/root/capstone/
+      export PATH=$PATH:{프로그램 경로}
+      alias consh='/usr/bin/python {프로그램 경로}/consh.py'
 
 
 -----
