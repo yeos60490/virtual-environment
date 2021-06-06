@@ -5,17 +5,35 @@ env=$1
 command_type="activate"
 root_dir="/root/capstone/"
 
-
-#change prompt 
 echo $command_type
-export PS1="(${env})"$PS1
-	
-
-#change python, package 
-python3 ${root_dir}env.py activate ${env}
-
-export PYTHONPATH=${root_dir}'envs/'${env}
-#echo $PYTHONPATH
 
 
+prompt=$(python3 ${root_dir}env.py activate prompt ${env})
+
+
+if [ "${prompt}" = "activated" ]; then
+	echo "alrealy activated"
+	echo " "
+
+elif [ "${prompt}" = "not_exist" ]; then
+	echo "Could not find environment: ${env}"
+	echo "You can list all discoverable environments with : consh env list "
+	echo " "
+
+
+else
+
+	#senario1. change prompt 
+	export PS1=${prompt}" "
+	#export PS1="(${env})"$PS1
+
+	#senario2. change package path (sys.path) 
+	export PYTHONPATH=${root_dir}'envs/'${env}
+
+
+	#senario3. change python
+
+
+
+fi
 

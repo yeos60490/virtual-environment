@@ -6,6 +6,31 @@ import json
 ROOT_DIR = '/root/capstone/envs/'
 
 
+
+def activate_prompt(env):
+    prompt = subprocess.check_output("echo $PS1", shell=True).decode() 
+
+    if prompt[0] == '(':
+        end = prompt.index(')') + 1
+        print("activated")
+        return prompt[:end]
+
+    else:
+        env_str = subprocess.check_output("ls -l " + ROOT_DIR + " | awk '/^d/{print $NF}'", shell=True).decode()
+        env_list = env_str.split("\n")
+
+        if env in env_list:
+            prompt = '(' + env + ')' + prompt
+            print(prompt)
+            return prompt
+
+
+        else:
+            print("not_exist")
+
+
+
+
 def activate_path(env):
 
     #python version 가져오기 
@@ -13,7 +38,7 @@ def activate_path(env):
         json_data = json.load(json_file)
 
     python_ver = json_data['python'][0]['version']
-    #print(python_ver)
+    print(python_ver)
    
     '''
     print(sys.path)
@@ -48,16 +73,17 @@ def deactivate_path():
         end = prompt.index(')')
         env = prompt[1:end]
 
-    print(env)
+    #print(env)
 
     if env != "":
+        #print(env)
         #python version 가져오기 
         with open(f"{ROOT_DIR}{env}/settings.json" , "r") as json_file:
             json_data = json.load(json_file)
 
         python_ver = json_data['python'][0]['version']
-        #print(python_ver)
-        
+        print(python_ver)
+
         '''
         #print(sys.path)
        
@@ -68,18 +94,26 @@ def deactivate_path():
         #print(sys.path)
         '''
 
+    #else:
+    #    print("nothing to deactivate")
+
 
 
 if __name__ == '__main__':
     command_type = sys.argv[1]
 
     if command_type == "activate":
-        activate_path(sys.argv[2])
+        if sys.argv[2] == "prompt":
+            activate_prompt(sys.argv[3])
+
 
     elif command_type == "deactivate":
         if sys.argv[2] == "prompt":
             deactivate_prompt()
 
-        else:
+        elif sys.argv[2] == "base":
             deactivate_path()
+
+        #elif sys.argv[2] == "python_ver":
+        #    deactivate_python_ver()
 

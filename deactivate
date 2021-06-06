@@ -6,14 +6,15 @@ root_dir="/root/capstone/"
 echo $command_type
 
 
-#change python, package 
-python3 ${root_dir}env.py deactivate base
-
-
-#change prompt 
-prompt=$(python3 ${root_dir}env.py deactivate prompt)
-export PS1=${prompt}" "
-
+#senario1. change package path (sys.path)
+python_ver=$(python3 ${root_dir}env.py deactivate base)
+#export PYTHONPATH='/usr/local/lib/python'${python_ver}'/dist-packages/'
 export PYTHONPATH='/usr/local/lib/python3.6/dist-packages/'
 	
 
+#senario2. change prompt 
+prompt=$(python3 ${root_dir}env.py deactivate prompt)
+export PS1=${prompt}" "
+
+
+#senario3. change python
