@@ -13,5 +13,7 @@ python3 ${root_dir}env.py deactivate base
 #change prompt 
 prompt=$(python3 ${root_dir}env.py deactivate prompt)
 export PS1=${prompt}" "
+
+export PYTHONPATH='/usr/local/lib/python3.6/dist-packages/'
 	
 

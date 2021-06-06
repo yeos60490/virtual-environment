@@ -13,8 +13,9 @@ def activate_path(env):
         json_data = json.load(json_file)
 
     python_ver = json_data['python'][0]['version']
-    print(python_ver)
-    
+    #print(python_ver)
+   
+    '''
     print(sys.path)
    
     local_path = '/usr/local/lib/python' + python_ver + '/dist-packages'
@@ -22,7 +23,7 @@ def activate_path(env):
     sys.path.append(ROOT_DIR + env)
 
     print(sys.path)
-
+    '''
 
 
 def deactivate_prompt():
@@ -55,16 +56,17 @@ def deactivate_path():
             json_data = json.load(json_file)
 
         python_ver = json_data['python'][0]['version']
-        print(python_ver)
+        #print(python_ver)
         
-        print(sys.path)
+        '''
+        #print(sys.path)
        
         #sys.path.remove(ROOT_DIR + env)
         local_path = '/usr/local/lib/python' + python_ver + '/dist-packages'
         sys.path.append(local_path)
 
-        print(sys.path)
-
+        #print(sys.path)
+        '''
 
 
 

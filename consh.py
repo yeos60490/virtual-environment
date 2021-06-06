@@ -41,23 +41,6 @@ def Info():
     print("info")
 
 
-def activate(env):
-    print("activate")
-    #os.system(ROOT_DIR + "/command.sh")
-    #os.system(". ./command.sh")
-    #os.system(". ~/.bash_aliases")
-    #os.system("bash command.sh")
-    #os.system("source command.sh")
-    #os.system("PS1='(test)'$PS1")
-    #os.system("echo $PS1")
-    #os.system("ls -al")
-    os.system("/bin/bash -c 'source /root/capstone/command.sh'")
-    #print(env)
-
-
-def deactivate():
-    print("deactivate")
-
 
 def env_create(env, python_ver):
     if python_ver == "current":
@@ -102,13 +85,13 @@ if __name__ == '__main__':
  
     command_type = sys.argv[1] if len(sys.argv) >= 2 else "None"
 
-    if command_type == "activate":
-        activate(sys.argv[2])   
+    #if command_type == "activate":
+    #    activate(sys.argv[2])   
         
-    elif command_type == "deactivate":
-        deactivate()   
+    #elif command_type == "deactivate":
+    #    deactivate()   
     
-    elif command_type == "env":
+    if command_type == "env":
         if sys.argv[2] == "create":
             python_ver = sys.argv[4].split('==')[1] if len(sys.argv) >= 5 else "current"
             env_create(sys.argv[3], python_ver)
