@@ -106,28 +106,4 @@ if __name__ == '__main__':
 
           
     #Options()
-    '''
-    parser = argparse.ArgumentParser()
-
-    parser.add_argument(
-        "--info",
-        action = "store_true",
-        help="info"
-    )
-
-    parser.add_argument(
-        "activate",
-        action = "store_true",
-        #required=False,
-        #default = "base",
-        #type = str,
-        help="activate environment"
-    )
-
-    args = parser.parse_args()
-    #print(args)
-
-
-    #if args.activate:
-    #    activate("test")
-    '''
+    
