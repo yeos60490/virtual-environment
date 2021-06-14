@@ -4,6 +4,7 @@ env=$2
 base_prompt="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$" 
 root_dir='/root/capstone/'
 
+
 if [ "${command_type}" = "activate" ]; then
 	echo "act"
 	echo $command_type
