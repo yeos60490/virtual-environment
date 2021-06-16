@@ -1,4 +1,5 @@
 ## virtual_environment
+캡스톤 디자인 프로젝트 
 Linux 용 Python 환경 분리 프로그램
 
 -----
