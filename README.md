@@ -10,7 +10,7 @@
 ### Default Settings
 - bashrc 에 다음 내용 추가
 
-      vi /root/.bashrc
+      vi ~/.bashrc
       export PATH=$PATH:{프로그램 경로}
       alias consh='/usr/bin/python {프로그램 경로}/consh.py'
 
