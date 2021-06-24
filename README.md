@@ -25,7 +25,7 @@
       
 - 환경 만들기 / 삭제
 
-      consh env create NAME [-option python==version]
+      consh env create NAME [option python==version]
       consh env remove NAME
       
       
