@@ -6,7 +6,7 @@
 - 가상환경 생성/관리/삭제
 - package 설치 및 관리 (충돌방지)
 - 리소스 공유 (중복 설치 제거)
-- python 설치 및 
+- python 설치 및 선택 
 
 -----
 ### Default Settings
