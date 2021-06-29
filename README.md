@@ -1,4 +1,4 @@
-## virtual_environment
+## virtual environment
 ##### Capstone design project
 ##### Linux 용 Python 환경 분리 프로그램
 
