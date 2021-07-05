@@ -1,6 +1,6 @@
 ## virtual environment
-##### Capstone design project
-##### Linux 용 Python 환경 분리 프로그램
+#### Capstone design project
+#### Linux 용 Python 환경 분리 프로그램
 
 -----
 - 가상환경 생성/관리/삭제
