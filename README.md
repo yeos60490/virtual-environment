@@ -33,5 +33,13 @@
       source activate NAME
       source deactivate
       
+      
+- 패키지 설치/삭제
+
+- 패키지 업데이트/선택
+
+- 파이썬 설치/선택  
+
+
 
 
