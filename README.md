@@ -21,11 +21,10 @@
 
 - /usr/lib/python3.6/site.py
 
-
-     #210606 주석처리
-            #sitepackages.append(os.path.join(prefix, "local/lib",
-            #                                 "python" + sys.version[:3],
-            #                                 "dist-packages"))
+      주석처리
+      #sitepackages.append(os.path.join(prefix, "local/lib",
+      #                                 "python" + sys.version[:3],
+      #                                 "dist-packages"))
 
 
 -----
