@@ -15,6 +15,18 @@
       export PATH=$PATH:{프로그램 경로}
       alias consh='/usr/bin/python {프로그램 경로}/consh.py'
 
+      alias python='/usr/bin/python3'
+      export PYTHONPATH='/usr/local/lib/python3.6/dist-packages/'
+
+
+- /usr/lib/python3.6/site.py
+
+
+     #210606 주석처리
+            #sitepackages.append(os.path.join(prefix, "local/lib",
+            #                                 "python" + sys.version[:3],
+            #                                 "dist-packages"))
+
 
 -----
 ### 사용방법
